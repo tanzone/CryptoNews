@@ -2,8 +2,8 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div>Prova
-
+    <div>
+        <h1>Prova</h1>
 
     </div>
   )
