@@ -13,7 +13,7 @@ const NavBar = () => {
             <Typography.Title level={2} className='logo'>
                 <Link to='/'>UniPr CryptoNews</Link>
             </Typography.Title>
-            <Menu theme='dark'>
+            <Menu theme='light'>
                 <Menu.Item icon={<HomeOutlined />}>
                     <Link to='/'>Home</Link>
                 </Menu.Item>
