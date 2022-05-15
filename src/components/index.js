@@ -1,11 +1,14 @@
-import { default as NavBar } from "./NavBar";
-import { default as CriptosPage } from "./CriptosPage";
-import { default as CriptoDetailsPage } from "./CriptoDetailsPage";
-import { default as ExchangePage } from "./ExchangePage";
-import { default as NewsPage } from "./NewsPage";
-import { default as HomePage } from "./HomePage";
+import { default as Layout } from "./Layout/Layout";
+import { default as Sidebar } from "./Sidebar/Sidebar";
+
+import { default as CriptosPage } from "./Pages/CriptosPage";
+import { default as CriptoDetailsPage } from "./Pages/CriptoDetailsPage";
+import { default as ExchangePage } from "./Pages/ExchangePage";
+import { default as NewsPage } from "./Pages/NewsPage";
+import { default as HomePage } from "./Pages/HomePage";
 
 
 
 
-export { NavBar, CriptoDetailsPage, HomePage, ExchangePage, NewsPage, CriptosPage };
+
+export { Layout, Sidebar, CriptoDetailsPage, HomePage, ExchangePage, NewsPage, CriptosPage };

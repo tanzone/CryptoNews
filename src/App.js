@@ -1,44 +1,50 @@
-import React from 'react';
-import { Route, Link, Routes } from "react-router-dom";
-import { Layout, Typography, Space } from "antd";
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { ThemeProvider } from "styled-components";
 
-import { NavBar, HomePage, CriptosPage, CriptoDetailsPage, ExchangePage, NewsPage } from "./components";
-import "./App.css";
+import { GlobalStyle } from "./styles/globalStyles";
+import { darkTheme, lightTheme } from "./styles/theme";
+
+import { Layout, HomePage, CriptosPage, CriptoDetailsPage, ExchangePage, NewsPage } from "./components";
+
+
+export const ThemeContext = React.createContext(null);
 
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+  const themeStyle = theme === "light" ? lightTheme : darkTheme;
+
   return (
-    <div className='app'>
-        {/**Space dedicated for navbar */}
-        <div className='navbar'>
-          <NavBar />
-        </div>
-        {/**Space dedicated for main content */}
-        <div className='main'>
+    <ThemeContext.Provider value={{ setTheme, theme }}>
+      <ThemeProvider theme={themeStyle}>
+        <GlobalStyle />
+        <Helmet>
+          <title>Unipr - CriptoNews</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+        </Helmet>
+        <>
           <Layout>
-            <div className='routes'>
-              <Routes>
-                <Route exact path='/' element={<HomePage />}>
-                </Route>
-                <Route exact path='/cryptosPage' element={<CriptosPage />}>
-                </Route>
-                <Route exact path='/crypto/:coinId' element={<CriptoDetailsPage />}>
-                </Route>
-                <Route exact path='/cryptoExchange' element={<ExchangePage />}>
-                </Route>
-                <Route exact path='/cryptoNews' element={<NewsPage />}>
-                </Route>
-              </Routes>
-            </div>
+            <Routes>
+              <Route exact path='/' element={<HomePage />}>
+              </Route>
+              <Route exact path='/cryptosPage' element={<CriptosPage />}>
+              </Route>
+              <Route exact path='/crypto/:coinId' element={<CriptoDetailsPage />}>
+              </Route>
+              <Route exact path='/cryptoExchange' element={<ExchangePage />}>
+              </Route>
+              <Route exact path='/cryptoNews' element={<NewsPage />}>
+              </Route>
+            </Routes>
           </Layout>
-        </div>
-        {/**Space dedicated for footer */}
-        <div className='footer'>
-
-        </div>
-
-    </div>
-  )
-}
+        </>
+      </ThemeProvider>
+    </ThemeContext.Provider>
+  );
+};
 
 export default App
