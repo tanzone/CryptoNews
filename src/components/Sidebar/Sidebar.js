@@ -11,6 +11,8 @@ import { SDivider, SLinkContainer, SLink, SLinkIcon, SLinkLabel, SLinkNotificati
 import { ThemeContext } from "./../../App";
 import logo from "../../images/uniprLogo.png";
 
+import Settings from "../Settings";
+
 const Sidebar = () => {
     const searchRef = useRef(null);
     const { setTheme, theme } = useContext(ThemeContext);
@@ -26,10 +28,16 @@ const Sidebar = () => {
         }
     };
 
+    function setBtnSidebar()
+    {
+        setSidebarOpen((p) => !p);
+        Settings.setSidebarOpen();
+    };
+
     return (
         <SSidebar isOpen={sidebarOpen}>
             <>
-                <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
+                <SSidebarButton isOpen={sidebarOpen} onClick={setBtnSidebar}>
                     <AiOutlineLeft />
                 </SSidebarButton>
             </>

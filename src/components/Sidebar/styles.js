@@ -9,7 +9,7 @@ export const SSidebar = styled.div`
     height: 100vh;
     padding: ${v.lgSpacing};
 
-    position: relative;
+    position: fixed;
 `;
 
 export const SSidebarButton = styled.button`
