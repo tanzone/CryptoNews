@@ -12,7 +12,7 @@ import { CriptosPage, NewsPage } from "../../components";
 const { Title } = Typography;
 
 const HomePage = () => {
-  const { data, isFetching } = useGetCryptosQuery();
+  const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
   //console.log(data);
@@ -41,12 +41,12 @@ const HomePage = () => {
       </Row>
       <div className='home-heading-container'>
         <Title level={2} className="home-title">Top 10 Cryptocurrencies in the world</Title>
-        <Title level={3} className="show-more">Show More</Title>
+        <Title level={3} className="show-more"><Link to="/cryptosPage">Show More</Link></Title>
       </div>
       <CriptosPage simplified/>
       <div className='home-heading-container'>
         <Title level={2} className="home-title">Latest Crypto News</Title>
-        <Title level={3} className="show-more">Show More</Title>
+        <Title level={3} className="show-more"><Link to="/cryptoNews">Show More</Link></Title>
       </div>
       <NewsPage simplified/>
 
