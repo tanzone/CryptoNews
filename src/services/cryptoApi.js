@@ -13,7 +13,7 @@ const params = {
 
 const cryptoApiHeaders = {
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-    'X-RapidAPI-Key': '024f8fa41dmsh8ce94befd8c9bb9p123b26jsn009e9408682e'
+    'X-RapidAPI-Key': 'c87ac57df2msh19e82a87c8dc11ep164417jsn426741b64288'
     
 };
 
