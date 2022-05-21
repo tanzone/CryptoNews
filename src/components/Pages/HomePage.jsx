@@ -7,6 +7,7 @@ import './styles.css';
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 import { CriptosPage, NewsPage } from "../../components";
+import Loader from "./Loader";
 
 
 const { Title } = Typography;
@@ -17,7 +18,7 @@ const HomePage = () => {
 
   //console.log(data);
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <>

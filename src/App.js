@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/globalStyles";
 import { darkTheme, lightTheme } from "./styles/theme";
 
-import { Layout, HomePage, CriptosPage, CriptoDetailsPage, ExchangePage, NewsPage } from "./components";
+import { Layout, HomePage, CriptosPage, CriptoDetailsPage, NewsPage } from "./components";
 
 
 export const ThemeContext = React.createContext(null);
@@ -34,8 +34,6 @@ const App = () => {
               <Route exact path='/cryptosPage' element={<CriptosPage/>}>
               </Route>
               <Route exact path='/crypto/:coinId' element={<CriptoDetailsPage />}>
-              </Route>
-              <Route exact path='/cryptoExchange' element={<ExchangePage />}>
               </Route>
               <Route exact path='/cryptoNews' element={<NewsPage />}>
               </Route>

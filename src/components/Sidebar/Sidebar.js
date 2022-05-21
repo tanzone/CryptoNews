@@ -1,10 +1,11 @@
 import React, { useContext, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { AiOutlineLeft, AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineSearch } from "react-icons/ai";
 import { MdDashboard, MdOutlineAttachMoney } from "react-icons/md";
 
-import { SDivider, SLinkContainer, SLink, SLinkIcon, SLinkLabel, SLinkNotification, SLogo,
+import {
+    SDivider, SLinkContainer, SLink, SLinkIcon, SLinkLabel, SLinkNotification, SLogo,
     SSearch, SSearchIcon, SSidebar, SSidebarButton, STheme, SThemeLabel, SThemeToggler, SToggleThumb,
 } from "./styles";
 
@@ -28,19 +29,13 @@ const Sidebar = () => {
         }
     };
 
-    function setBtnSidebar()
-    {
+    function setBtnSidebar() {
         setSidebarOpen((p) => !p);
         Settings.setSidebarOpen();
     };
 
     return (
         <SSidebar isOpen={sidebarOpen}>
-            <>
-                <SSidebarButton isOpen={sidebarOpen} onClick={setBtnSidebar}>
-                    <AiOutlineLeft />
-                </SSidebarButton>
-            </>
             <SLogo>
                 <img src={logo} alt="logo" />
             </SLogo>
@@ -65,7 +60,6 @@ const Sidebar = () => {
                         {sidebarOpen && (
                             <>
                                 <SLinkLabel>{label}</SLinkLabel>
-                                {/* if notifications are at 0 or null, do not display */}
                                 {!!notification && (
                                     <SLinkNotification>{notification}</SLinkNotification>
                                 )}
@@ -85,6 +79,11 @@ const Sidebar = () => {
                     <SToggleThumb style={theme === "dark" ? { right: "1px" } : {}} />
                 </SThemeToggler>
             </STheme>
+
+            <SDivider />
+            <SSidebarButton isOpen={sidebarOpen} onClick={setBtnSidebar}>
+                <AiOutlineLeft />
+            </SSidebarButton>
         </SSidebar>
     );
 };
@@ -101,12 +100,6 @@ const linksArray = [
         icon: <MdOutlineAttachMoney />,
         to: "/cryptosPage",
         notification: 3,
-    },
-    {
-        label: "Exchange",
-        icon: <MdOutlineAttachMoney />,
-        to: "/cryptoExchange",
-        notification: 0,
     },
     {
         label: "News",

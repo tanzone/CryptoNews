@@ -15,11 +15,10 @@ export const SSidebar = styled.div`
 export const SSidebarButton = styled.button`
     ${btnReset};
     position: absolute;
-    top: ${v.xxlSpacing};
-    right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+    bottom: ${v.xxlSpacing};
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
     background: ${({ theme }) => theme.bg};
     box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
     display: flex;
