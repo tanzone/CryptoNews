@@ -17,9 +17,11 @@ const CriptosPage = ({simplified}) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm])
 
-  //console.log(count);
+  /*
+  console.log(count);
   console.log(cryptos);
-
+  */
+ 
   if(isFeatching) return "Loading...";
 
   return (

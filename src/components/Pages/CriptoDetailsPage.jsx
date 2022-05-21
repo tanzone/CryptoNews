@@ -17,7 +17,7 @@ const CriptoDetailsPage = () => {
   const { coinId } = useParams();
   const [timePeriod, setTimePeriod] = useState('7d');
   const { data, isFetching } = useGetCryptoDetailQuery(coinId);
-  const { data: coinHistory } = useGetCryptoHistoryQuery(coinId, timePeriod);
+  const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod});
   const cryptoDetails = data?.data?.coin;
 
   if (isFetching) return "Loading...";
@@ -57,7 +57,9 @@ const CriptoDetailsPage = () => {
         {time.map((date) => <Option key={date}>{date}</Option>)}
       </Select>
 
+      
       <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails?.price)} coinName={cryptoDetails?.name} />
+      
 
       <Col className="stats-container">
         <Col className="coin-value-statistics">
