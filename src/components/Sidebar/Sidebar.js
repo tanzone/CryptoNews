@@ -12,12 +12,10 @@ import {
 import { ThemeContext } from "./../../App";
 import logo from "../../images/uniprLogo.png";
 
-import Settings from "../Settings";
-
 const Sidebar = () => {
     const searchRef = useRef(null);
     const { setTheme, theme } = useContext(ThemeContext);
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
     const { pathname } = useLocation();
 
     const searchClickHandler = () => {
@@ -31,7 +29,6 @@ const Sidebar = () => {
 
     function setBtnSidebar() {
         setSidebarOpen((p) => !p);
-        Settings.setSidebarOpen();
     };
 
     return (
@@ -99,13 +96,13 @@ const linksArray = [
         label: "Cryptos",
         icon: <MdOutlineAttachMoney />,
         to: "/cryptosPage",
-        notification: 3,
+        notification: 0,
     },
     {
         label: "News",
         icon: <MdOutlineAttachMoney />,
         to: "/cryptoNews",
-        notification: 1,
+        notification: 0,
     },
 ];
 

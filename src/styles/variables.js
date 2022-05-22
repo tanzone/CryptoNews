@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 export const v = {
-    sidebarWidth: `300px`,
+    sidebarWidth: `250px`,
     sidebarWidthClose: `100px`,
     smSpacing: `8px`,
     mdSpacing: `16px`,
@@ -9,8 +9,6 @@ export const v = {
     xlSpacing: `32px`,
     xxlSpacing: `48px`,
     borderRadius: `6px`,
-
-    footerHeight: `50px`,
 };
 
 export const btnReset = css`
