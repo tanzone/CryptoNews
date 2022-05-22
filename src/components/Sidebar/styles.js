@@ -5,7 +5,7 @@ import { btnReset, v } from "../../styles/variables";
 
 export const SSidebar = styled.div`
     width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
-    background: ${({ theme }) => theme.bg}; 
+    background: ${({ theme }) => theme.bg};
     height: 100vh;
     padding: ${v.lgSpacing};
 
@@ -18,7 +18,7 @@ export const SSidebarButton = styled.button`
     bottom: ${v.xxlSpacing};
     width: 50px;
     height: 50px;
-    border-radius: 70%;
+    border-radius: 50%;
     background: ${({ theme }) => theme.bg};
     box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
     display: flex;
