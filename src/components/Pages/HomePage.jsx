@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import millify from "millify";
-import { Typography, Row, Col, Statistic, Card } from 'antd';
+import { Typography, Row, Col, Card } from 'antd';
 import { Link } from 'react-router-dom';
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
@@ -9,7 +9,7 @@ import { CriptosPage, NewsPage } from "../../components";
 import Loader from "./Loader";
 
 import './styles.css';
-import { STitleLarge, SStatsLarge, SStatsSmall } from "./styles";
+import { STitleLarge, STitleMedium, SStatistic, SCard } from "./styles";
 
 import { ThemeContext } from "./../../App";
 
@@ -26,43 +26,43 @@ const HomePage = () => {
 
   return (
     <>
-      <STitleLarge level={2}>Global Crypto Stats</STitleLarge>
+      <STitleLarge level={2}>Unipr CryptoNews & Stats</STitleLarge>
       <Row>
-        <Col span={8}>
-          <Card title={<SStatsLarge>Total Cryptocurrencies</SStatsLarge>} bordered={true}>
-            <SStatsSmall>{millify(globalStats.total)}</SStatsSmall>
-          </Card>
+        <Col span={12}>
+          <SCard bordered={false}>
+            <SStatistic title="Total Currencies" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total)} />
+          </SCard>
         </Col>
-        <Col span={8}>
-        <Card title={<SStatsLarge>Total Exchanges</SStatsLarge>} bordered={true}>
-          <SStatsSmall>{millify(globalStats.totalExchanges)}</SStatsSmall>
-          </Card>
+        <Col span={12}>
+          <SCard bordered={false}>
+            <SStatistic title="Total Exchanges"  valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalExchanges)} />
+          </SCard>
         </Col>
-        <Col span={8}>
-           <Card title={<SStatsLarge>Total Market Cap</SStatsLarge>} bordered={true}>
-          <SStatsSmall>{millify(globalStats.totalMarketCap)}</SStatsSmall>
-          </Card>
+        <Col span={12}>
+          <SCard bordered={false}>
+            <SStatistic title="Total Market Cap"  valueStyle={{ color: (theme === "light" ? "black" : "white") }}value={millify(globalStats.totalMarketCap)} />
+          </SCard>
+        </Col>
+        <Col span={12}>
+          <SCard bordered={false}>
+            <SStatistic title="Total 24h Volume" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total24hVolume)} />
+          </SCard>
+        </Col>
+        <Col span={24}>
+          <SCard bordered={false}>
+            <SStatistic title="Total Markets" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalMarkets)} />
+          </SCard>
         </Col>
       </Row>
-      <Row>
-        <Col span={8}>
-        <Card title={<SStatsLarge>Total 24h Volume</SStatsLarge>} bordered={true}>
-          <SStatsSmall>{millify(globalStats.total24hVolume)}</SStatsSmall>
-          </Card>
-        </Col>
-        <Col span={8}>
-           <Card title={<SStatsLarge>Total Markets</SStatsLarge>} bordered={true}>
-          <SStatsSmall>{millify(globalStats.totalMarkets)}</SStatsSmall>
-          </Card>
-        </Col>
-      </Row>
+
       <div className='home-heading-container'>
-        <Title level={2} className="home-title">Top 10 Cryptocurrencies in the world</Title>
+        <STitleMedium level={2} className="home-title">Top 10 Cryptocurrencies in the world</STitleMedium>
         <Title level={3} className="show-more"><Link to="/cryptosPage">Show More</Link></Title>
       </div>
       <CriptosPage simplified />
+
       <div className='home-heading-container'>
-        <Title level={2} className="home-title">Latest Crypto News</Title>
+        <STitleMedium level={2} className="home-title">Latest Crypto News</STitleMedium>
         <Title level={3} className="show-more"><Link to="/cryptoNews">Show More</Link></Title>
       </div>
       <NewsPage simplified />

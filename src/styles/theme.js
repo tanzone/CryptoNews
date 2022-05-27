@@ -5,6 +5,11 @@ export const lightTheme = {
     bg3: "rgb(230,230,230)",
     text: "rgb(45,45,45)",
     primary: "rgb(52, 131, 235)",
+    bgCard:"green",
+    borderCardCripto:"black",
+    bgCardCripto: "green",
+    borderCardNews: "black",
+    bgCardNews: "green",
 };
 export const darkTheme = {
     bg: "rgb(15,15,15)",
@@ -13,4 +18,9 @@ export const darkTheme = {
     bg3: "rgb(50,50,50)",
     text: "rgb(210,210,210)",
     primary: "rgb(52, 131, 235)",
+    bgCard:"red",
+    borderCardCripto:"white",
+    bgCardCripto: "red",
+    borderCardNews: "white",
+    bgCardNews: "red",
 };

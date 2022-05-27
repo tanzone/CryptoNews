@@ -10,6 +10,8 @@ import { useGetCryptoDetailQuery, useGetCryptoHistoryQuery} from "../../services
 import LineChart from '../Pages/LineChart';
 import Loader from "./Loader";
 
+import { STitleSmall } from "./styles";
+
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -71,10 +73,10 @@ const CriptoDetailsPage = () => {
           {stats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <STitleSmall>{icon}</STitleSmall>
+                <STitleSmall>{title}</STitleSmall>
               </Col>
-              <Text className="stats">{value}</Text>
+              <STitleSmall className="stats">{value}</STitleSmall>
             </Col>
           ))}
         </Col>
@@ -86,10 +88,10 @@ const CriptoDetailsPage = () => {
           {genericStats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
               <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <STitleSmall>{icon}</STitleSmall>
+                <STitleSmall>{title}</STitleSmall>
               </Col>
-              <Text className="stats">{value}</Text>
+              <STitleSmall className="stats">{value}</STitleSmall>
             </Col>
           ))}
         </Col>
@@ -103,7 +105,7 @@ const CriptoDetailsPage = () => {
           <Title level={3} className="coin-details-heading">{cryptoDetails.name} Links</Title>
           {cryptoDetails.links?.map((link) => (
             <Row className="coin-link" key={link.name}>
-              <Title level={5} className="link-name">{link.type}</Title>
+              <STitleSmall level={5} className="link-name"><b>{link.type}</b></STitleSmall>
               <a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
             </Row>
           ))}

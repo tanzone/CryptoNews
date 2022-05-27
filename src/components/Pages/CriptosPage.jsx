@@ -7,7 +7,9 @@ import { useGetCryptosQuery } from '../../services/cryptoApi';
 
 import Loader from "./Loader";
 
-const CriptosPage = ({simplified}) => {
+import { STitleMedium, STitleSmall, SCardCripto } from "./styles";
+
+const CriptosPage = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFeatching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
@@ -15,7 +17,7 @@ const CriptosPage = ({simplified}) => {
 
   useEffect(() => {
     const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+
     setCryptos(filteredData);
   }, [cryptosList, searchTerm])
 
@@ -23,30 +25,33 @@ const CriptosPage = ({simplified}) => {
   console.log(count);
   console.log(cryptos);
   */
- 
-  if(isFeatching) return <Loader />;
+
+  if (isFeatching) return <Loader />;
 
   return (
     <>
       {!simplified && (
-        <div className='search-crypto'>
-        <Input placeholder='Search Cryptocurrency' onChange={(e) => setSearchTerm(e.target.value)}/>
-      </div>
+        <div>
+          <STitleMedium level={2}>Crypto Page</STitleMedium>
+          <div className='search-crypto'>
+            <Input placeholder='Search Cryptocurrency' onChange={(e) => setSearchTerm(e.target.value)} />
+          </div>
+        </div>
       )}
-      
+
       <Row gutter={[32, 32]} className="crypto-card-container">
-        {cryptos?.map((currency) =>(
+        {cryptos?.map((currency) => (
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
             <Link to={`/crypto/${currency.uuid}`}>
-              <Card 
-                title={`${currency.rank}. ${currency.name}`}
+              <SCardCripto
+                title={<STitleSmall>{currency.rank}. {currency.name}</STitleSmall>}
                 extra={<img className='crypto-image' src={currency.iconUrl} alt={currency.id} />}
                 hoverable
-                >
-                  <p><b>Price:</b> {millify(currency.price)}</p>
-                  <p><b>Market Cap:</b> {millify(currency.marketCap)}</p>
-                  <p><b>Daily Change:</b> {millify(currency.change)}</p>
-              </Card>
+              >
+                <STitleSmall><b>Price:</b> {millify(currency.price)}</STitleSmall><br />
+                <STitleSmall><b>Market Cap:</b> {millify(currency.marketCap)}</STitleSmall><br />
+                <STitleSmall><b>Daily Change:</b> {millify(currency.change)}</STitleSmall><br />
+              </SCardCripto>
             </Link>
           </Col>
         ))}
