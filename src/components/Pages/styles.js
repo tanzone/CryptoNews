@@ -3,7 +3,7 @@ import { Typography } from 'antd';
 
 import { v } from "../../styles/variables";
 
-const { Text } = Typography;
+const { Text, Statistic } = Typography;
 
 
 export const STitleLarge = styled(Text)`
@@ -16,7 +16,12 @@ export const STitleMedium = styled(Text)`
     color: ${({ theme }) => theme.text};
 `;
 
-export const STitleSmall = styled(Text)`
+export const SStatsLarge = styled(Text)`
     font-size: larger;
+    color: ${({ theme }) => theme.text};
+`;
+
+export const SStatsSmall = styled(Text)`
+    font-size: small;
     color: ${({ theme }) => theme.text};
 `;
