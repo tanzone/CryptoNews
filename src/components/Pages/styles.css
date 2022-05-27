@@ -1,3 +1,8 @@
+.page-heading{
+    color: var(--pink);
+}
+
+
 .coin-detail-container{
     margin: 30px;
 }

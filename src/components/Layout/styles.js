@@ -8,7 +8,7 @@ export const SLayout = styled.div`
 
 export const SMain = styled.main`
     margin-left: calc(${v.sidebarWidth});
-    margin-right: calc(${v.smSpacing});
+    margin-right: calc(${v.xxlSpacing});
     padding: calc(${v.smSpacing} * 2);
 
     h1 {

@@ -40,12 +40,12 @@ const CriptosPage = ({simplified}) => {
             <Link to={`/crypto/${currency.uuid}`}>
               <Card 
                 title={`${currency.rank}. ${currency.name}`}
-                extra={<img className='crypto-image' src={currency.iconUrl} alt={currency.id}/>}
+                extra={<img className='crypto-image' src={currency.iconUrl} alt={currency.id} />}
                 hoverable
                 >
-                  <p>Price: {millify(currency.price)}</p>
-                  <p>Market Cap: {millify(currency.marketCap)}</p>
-                  <p>Daily Change: {millify(currency.change)}</p>
+                  <p><b>Price:</b> {millify(currency.price)}</p>
+                  <p><b>Market Cap:</b> {millify(currency.marketCap)}</p>
+                  <p><b>Daily Change:</b> {millify(currency.change)}</p>
               </Card>
             </Link>
           </Col>

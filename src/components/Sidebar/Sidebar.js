@@ -2,10 +2,10 @@ import React, { useContext, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { AiOutlineLeft, AiOutlineSearch } from "react-icons/ai";
-import { MdDashboard, MdOutlineAttachMoney } from "react-icons/md";
+import { MdDashboard, MdOutlineAttachMoney, MdMenuBook } from "react-icons/md";
 
 import {
-    SDivider, SLinkContainer, SLink, SLinkIcon, SLinkLabel, SLinkNotification, SLogo,
+    SSidebarImg, SDivider, SLinkContainer, SLink, SLinkIcon, SLinkLabel, SLinkNotification, SLogo,
     SSearch, SSearchIcon, SSidebar, SSidebarButton, STheme, SThemeLabel, SThemeToggler, SToggleThumb,
 } from "./styles";
 
@@ -33,9 +33,11 @@ const Sidebar = () => {
 
     return (
         <SSidebar isOpen={sidebarOpen}>
-            <SLogo>
-                <img src={logo} alt="logo" />
-            </SLogo>
+            <SLink to="/" style={!sidebarOpen ? { width: `fit-content` } : {}}>
+                <SLogo>
+                    <SSidebarImg src={logo} alt="logo" />
+                </SLogo>
+            </SLink>
             <SSearch
                 onClick={searchClickHandler}
                 style={!sidebarOpen ? { width: `fit-content` } : {}}
@@ -100,7 +102,7 @@ const linksArray = [
     },
     {
         label: "News",
-        icon: <MdOutlineAttachMoney />,
+        icon: <MdMenuBook />,
         to: "/cryptoNews",
         notification: 0,
     },

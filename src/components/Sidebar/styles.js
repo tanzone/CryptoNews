@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 import { btnReset, v } from "../../styles/variables";
 
+
+export const SSidebarImg = styled.img`
+    border-radius: 30%;
+`;
+
 export const SSidebar = styled.div`
     width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
     background: ${({ theme }) => theme.bg};
