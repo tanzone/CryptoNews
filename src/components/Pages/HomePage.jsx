@@ -29,28 +29,28 @@ const HomePage = () => {
       <STitleLarge level={2}>Unipr CryptoNews & Stats</STitleLarge>
       <Row>
         <Col span={12}>
-          <SCard bordered={false}>
-            <SStatistic title="Total Currencies" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total)} />
+          <SCard bordered={false} title="Total Currencies" headStyle={{ color: (theme === "light" ? "black" : "white") }}>
+            <SStatistic valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total)} />
           </SCard>
         </Col>
         <Col span={12}>
-          <SCard bordered={false}>
-            <SStatistic title="Total Exchanges"  valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalExchanges)} />
+          <SCard bordered={false} title="Total Exchanges" headStyle={{ color: (theme === "light" ? "black" : "white") }}>
+            <SStatistic valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalExchanges)} />
           </SCard>
         </Col>
         <Col span={12}>
-          <SCard bordered={false}>
-            <SStatistic title="Total Market Cap"  valueStyle={{ color: (theme === "light" ? "black" : "white") }}value={millify(globalStats.totalMarketCap)} />
+          <SCard bordered={false} title="Total Market Cap" headStyle={{ color: (theme === "light" ? "black" : "white") }}>
+            <SStatistic valueStyle={{ color: (theme === "light" ? "black" : "white") }}value={millify(globalStats.totalMarketCap)} />
           </SCard>
         </Col>
         <Col span={12}>
-          <SCard bordered={false}>
-            <SStatistic title="Total 24h Volume" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total24hVolume)} />
+          <SCard bordered={false} title="Total 24h Volume" headStyle={{ color: (theme === "light" ? "black" : "white") }}>
+            <SStatistic valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.total24hVolume)} />
           </SCard>
         </Col>
         <Col span={24}>
-          <SCard bordered={false}>
-            <SStatistic title="Total Markets" valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalMarkets)} />
+          <SCard bordered={false} title="Total Markets" headStyle={{ color: (theme === "light" ? "black" : "white") }}>
+            <SStatistic valueStyle={{ color: (theme === "light" ? "black" : "white") }} value={millify(globalStats.totalMarkets)} />
           </SCard>
         </Col>
       </Row>

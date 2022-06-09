@@ -1,26 +1,26 @@
 export const lightTheme = {
-    bg: "rgb(255,255,255)",
-    bgAlpha: "rgba(250,250,250,.3)",
-    bg2: "rgb(245,245,245)",
-    bg3: "rgb(230,230,230)",
-    text: "rgb(45,45,45)",
+    bg: "rgb(223,223,223)",
+    bgAlpha: "rgba(250,250,250)",
+    bg2: "rgb(240,245,249)",
+    bg3: "rgb(82,97,107)",
+    text: "rgb(30,32,34)",
     primary: "rgb(52, 131, 235)",
-    bgCard:"green",
-    borderCardCripto:"black",
-    bgCardCripto: "green",
-    borderCardNews: "black",
-    bgCardNews: "green",
+    bgCard:"rgb(223,223,223)",
+    borderCardCripto:"rgb(30,32,34)",
+    bgCardCripto: "rgb(223,223,223)",
+    borderCardNews: "rgb(30,32,34)",
+    bgCardNews: "rgb(223,223,223)",
 };
 export const darkTheme = {
-    bg: "rgb(15,15,15)",
-    bgAlpha: "rgba(0,0,0,.3)",
-    bg2: "rgb(30,30,30)",
-    bg3: "rgb(50,50,50)",
-    text: "rgb(210,210,210)",
-    primary: "rgb(52, 131, 235)",
-    bgCard:"red",
+    bg: "rgb(34,40,49)",    //sfondo sidebar
+    bgAlpha: "rgba(0,0,0,.3)",  //sfondo search
+    bg2: "rgb(57,62,70)",   //sfondo main
+    bg3: "rgb(50,50,50)",  //select sidebar
+    text: "rgb(238,238,238)",   //colore text
+    primary: "rgb(52, 131, 235)", //colore light mode
+    bgCard:"rgb(34,40,49)",
     borderCardCripto:"white",
-    bgCardCripto: "red",
+    bgCardCripto: "rgb(34,40,49)",
     borderCardNews: "white",
-    bgCardNews: "red",
+    bgCardNews: "rgb(34,40,49)",
 };

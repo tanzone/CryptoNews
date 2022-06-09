@@ -9,6 +9,7 @@ const { Text } = Typography;
 export const STitleLarge = styled(Text)`
     font-size: xxx-large;
     color: ${({ theme }) => theme.text};
+    text-shadow: 1px 2px rgb(52, 131, 235);
 `;
 
 export const STitleMedium = styled(Text)`
