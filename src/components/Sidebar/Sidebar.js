@@ -76,13 +76,13 @@ const linksArray = [
         label: "Cryptos",
         icon: <MdOutlineAttachMoney />,
         to: "/cryptosPage",
-        notification: 1,
+        notification: 0,
     },
     {
         label: "News",
         icon: <MdMenuBook />,
         to: "/cryptoNews",
-        notification: 4,
+        notification: 0,
     },
 ];
 

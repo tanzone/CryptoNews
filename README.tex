@@ -39,6 +39,10 @@ Un ulteriore bottone presente nella barra laterale è quello della \textbf{Dark 
 Da come è possibile vedere nelle Figure \ref{fig:normale},  \ref{fig:notifiche}, \ref{fig:ridotta}, la barra può assumere differenti forme in base a come più si preferisce.
 Inoltre dalla Figura \ref{fig:notifiche} si nota che può comparire un numero di notifica nella pagina di riferimento. Purtroppo questa configurazione è stata tolta per una limitazione del software delle API alla quale il sito fa riferimento.
 
+\subsection{Schermata Pricipale}
+Dalle immagini sottostanti \ref{fig:topCrypto}, \ref{fig:topNews} si nota come in questa schermata le informazioni sono riportate secondo una grafica molto semplice ed intuitiva e sono le informazioni messe in ordine per importanza o per influenza.
+Si tendono, quindi a mostrare solamente le informazioni più rilevanti e per poi lasciare l'approfondimento di essi nelle loro pagine dedicate.
+
 
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
@@ -65,19 +69,60 @@ Inoltre dalla Figura \ref{fig:notifiche} si nota che può comparire un numero di
 \minipage{\textwidth}
     \centering
   \includegraphics[width=\linewidth]{5.png}
-  \caption{top 10 Crypto}\label{fig:topCrypto}
+  \caption{Latest News}\label{fig:topNews}
 \endminipage\hfill
 \end{figure}
+\clearpage
+
+\subsection{Dettagli e info}
+Nella schermata dedicata alla visualizzazione dei dati e delle informazioni generali riguardanti una specifica criptovaluta scelta dall'utente è possibile vedere proiettata tramite grafico l'andamento nel tempo del prezzo della moneta e tramite un selettore è possibile sceglierne la qunatità di tempo desiderata come da Figura \ref{fig:graphic}. 
+Scorrendo verso il basso si possono invece visualizzare altre informazioni utili  tra coi i link alle pagine di riferimento alla stessa moneta ed alla loro documentazione come da Figura \ref{fig:info} e Figura \ref{fig:links}.
+
+\begin{figure}[!htb]
+\minipage{0.4\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{10.png}
+  \caption{Grafico}\label{fig:graphic}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{11.png}
+  \caption{Statistiche}\label{fig:stats}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{12.png}
+  \caption{Info}\label{fig:info}
+\endminipage\hfill
+\minipage{0.4\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{13.png}
+  \caption{Links}\label{fig:links}
+\endminipage\hfill
+\end{figure}
+\clearpage
+
+\section{Tecnologie usate}
+
+Il progetto viene realizzato utilizzando \href{https://it.reactjs.org/}{React} e
+\href{https://nodejs.org/it/}{Node.js} con l'ausilio di visual studio code come supporto per programmare e caricare il tutto su git in maniera tale da riuscire a programmare su differenti computer mantendo sempre l'ultima versione realizzata.
+
+\subsection{Librerie utilizzate}
+Sono presenti differenti librerie grafiche come
+\textbf{Bootstrap}, \textbf{Antd}, \textbf{ChartJs}.
+Librerie di utilità come \textbf{Millify}, \textbf{Helmet},\textbf{Moment}.
+Mentre invece per la parte dedicata alla gestione delle API utilizzo il toolkit di \textbf{ReduxJs}.
+Per le varie icone invece vengono usate le \textbf{react-icon} e \textbf{ant-design/icon}.
+
+\subsection{Siti web di appoggio}
+Per procurare le informazioni faccio affidamento al sito \textbf{RapidAPI} che offre molti servizi gratuiti con una piccola limitazione sulle richieste giornaliere e mensili. 
 
 
+Nello specifico utilizzo \url{https://rapidapi.com/Coinranking/api/coinranking1/}
+per prendere le tutto ciò che mi serve per quanto riguarda le crypto valute.
 
-\subsection{Schermata Pricipale}
 
+\url{https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/} viene utilizzato per procurarsi tutte quelle che sono le news riguardanti un generico argomento.
 
-
- \href{https://www.overleaf.com/learn}{help library} for more  \url{https://www.overleaf.com/contact}.
-
-\bibliographystyle{alpha}
-\bibliography{sample}
 
 \end{document}
