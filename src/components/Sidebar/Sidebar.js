@@ -18,15 +18,6 @@ const Sidebar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const { pathname } = useLocation();
 
-    const searchClickHandler = () => {
-        if (!sidebarOpen) {
-            setSidebarOpen(true);
-            searchRef.current.focus();
-        } else {
-            // search functionality
-        }
-    };
-
     function setBtnSidebar() {
         setSidebarOpen((p) => !p);
     };
@@ -38,19 +29,6 @@ const Sidebar = () => {
                     <SSidebarImg src={logo} alt="logo" />
                 </SLogo>
             </SLink>
-            <SSearch
-                onClick={searchClickHandler}
-                style={!sidebarOpen ? { width: `fit-content` } : {}}
-            >
-                <SSearchIcon>
-                    <AiOutlineSearch />
-                </SSearchIcon>
-                <input
-                    ref={searchRef}
-                    placeholder="Search"
-                    style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
-                />
-            </SSearch>
             <SDivider />
             {linksArray.map(({ icon, label, notification, to }) => (
                 <SLinkContainer key={label} isActive={pathname === to}>
