@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+\documentclass{article}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+% Language setting
+\usepackage[italian]{babel}
 
-## Available Scripts
+% Set page size and margins
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
-In the project directory, you can run:
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
-### `npm start`
+\title{CryptoNews}
+\author{Manuel Tanzi}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+\begin{document}
+\maketitle
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+\section{Introduzione}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+CryptoNews è un sito per la visualizzazione di informazioni e statistiche inerenti al mondo delle cripto.
+In particolare si possono accedere ai dati, con uno scarto di 15 minuti,resi pubblici dalle differenti piattaforme online come \href{https://it.finance.yahoo.com/}{yahoo finance}, raccolte in questo unico sito con una schematizzazione semplice ed intuitiva, alla quale non è richiesto nessun tipo di login.
 
-### `npm run build`
+E' possibile anche avere una visualizzazione più dettagliata della cryptovaluta in questione con tutti i dettagli di riferimento stampati a schermo tramite grafici e link target. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+\section{Come appare il sito}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+\subsection{Barra laterale}
+La barra laterale del sito presenta differnti pulsanti di navigazione come la \textbf{Homepage} data dal pulsante con il logo dell'università di parma.
+Il pulsante \textbf{Dashboard} che porta l'utente in una tipica schermata a blocchi nella quale è possibile vedere le informazioni di maggior rilievo della giornata corrente.
+\textbf{Cryptos} che mostrerà a schermo tutte le criptovalute con i loro valori attuali alla quale è poi possibile accederne ai dettagli con un semplice click.
+Infine \textbf{News} che riportà alcuni titoli tra i siti più famosi di notiziari alla quale è possibile accerdervi ed espandere l notizia per saperne di più.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Un ulteriore bottone presente nella barra laterale è quello della \textbf{Dark mode} che eseguirà un cambio di colori della schermata.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Da come è possibile vedere nelle Figure \ref{fig:normale},  \ref{fig:notifiche}, \ref{fig:ridotta}, la barra può assumere differenti forme in base a come più si preferisce.
+Inoltre dalla Figura \ref{fig:notifiche} si nota che può comparire un numero di notifica nella pagina di riferimento. Purtroppo questa configurazione è stata tolta per una limitazione del software delle API alla quale il sito fa riferimento.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{1.png}
+  \caption{Normale}\label{fig:normale}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{2.png}
+  \caption{Notifiche}\label{fig:notifiche}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{3.png}
+  \caption{Ridotta}\label{fig:ridotta}
+\endminipage
+\end{figure}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+\begin{figure}[!htb]
+\minipage{\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{4.png}
+  \caption{top 10 Crypto}\label{fig:topCrypto}
+\endminipage\hfill
 
-## Learn More
+\minipage{\textwidth}
+    \centering
+  \includegraphics[width=\linewidth]{5.png}
+  \caption{top 10 Crypto}\label{fig:topCrypto}
+\endminipage\hfill
+\end{figure}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+\subsection{Schermata Pricipale}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ \href{https://www.overleaf.com/learn}{help library} for more  \url{https://www.overleaf.com/contact}.
 
-### Making a Progressive Web App
+\bibliographystyle{alpha}
+\bibliography{sample}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+\end{document}
