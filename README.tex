@@ -1,128 +1,135 @@
-\documentclass{article}
+---
+author:
+- Manuel Tanzi
+title: CryptoNews
+---
 
-% Language setting
-\usepackage[italian]{babel}
+# Introduzione
 
-% Set page size and margins
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+CryptoNews è un sito per la visualizzazione di informazioni e
+statistiche inerenti al mondo delle cripto. In particolare si possono
+accedere ai dati, con uno scarto di 15 minuti,resi pubblici dalle
+differenti piattaforme online come [yahoo
+finance](https://it.finance.yahoo.com/), raccolte in questo unico sito
+con una schematizzazione semplice ed intuitiva, alla quale non è
+richiesto nessun tipo di login.
 
-% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+E' possibile anche avere una visualizzazione più dettagliata della
+cryptovaluta in questione con tutti i dettagli di riferimento stampati a
+schermo tramite grafici e link target.
 
-\title{CryptoNews}
-\author{Manuel Tanzi}
+# Come appare il sito
 
-\begin{document}
-\maketitle
+## Barra laterale
 
+La barra laterale del sito presenta differnti pulsanti di navigazione
+come la **Homepage** data dal pulsante con il logo dell'università di
+parma. Il pulsante **Dashboard** che porta l'utente in una tipica
+schermata a blocchi nella quale è possibile vedere le informazioni di
+maggior rilievo della giornata corrente. **Cryptos** che mostrerà a
+schermo tutte le criptovalute con i loro valori attuali alla quale è poi
+possibile accederne ai dettagli con un semplice click. Infine **News**
+che riportà alcuni titoli tra i siti più famosi di notiziari alla quale
+è possibile accerdervi ed espandere l notizia per saperne di più.
 
-\section{Introduzione}
+Un ulteriore bottone presente nella barra laterale è quello della **Dark
+mode** che eseguirà un cambio di colori della schermata.
 
-CryptoNews è un sito per la visualizzazione di informazioni e statistiche inerenti al mondo delle cripto.
-In particolare si possono accedere ai dati, con uno scarto di 15 minuti,resi pubblici dalle differenti piattaforme online come \href{https://it.finance.yahoo.com/}{yahoo finance}, raccolte in questo unico sito con una schematizzazione semplice ed intuitiva, alla quale non è richiesto nessun tipo di login.
+Da come è possibile vedere nelle Figure
+[\[fig:normale\]](#fig:normale){reference-type="ref"
+reference="fig:normale"},
+[\[fig:notifiche\]](#fig:notifiche){reference-type="ref"
+reference="fig:notifiche"}, [3](#fig:ridotta){reference-type="ref"
+reference="fig:ridotta"}, la barra può assumere differenti forme in base
+a come più si preferisce. Inoltre dalla Figura
+[\[fig:notifiche\]](#fig:notifiche){reference-type="ref"
+reference="fig:notifiche"} si nota che può comparire un numero di
+notifica nella pagina di riferimento. Purtroppo questa configurazione è
+stata tolta per una limitazione del software delle API alla quale il
+sito fa riferimento.
 
-E' possibile anche avere una visualizzazione più dettagliata della cryptovaluta in questione con tutti i dettagli di riferimento stampati a schermo tramite grafici e link target. 
+## Schermata Pricipale
 
-\section{Come appare il sito}
+Dalle immagini sottostanti
+[\[fig:topCrypto\]](#fig:topCrypto){reference-type="ref"
+reference="fig:topCrypto"}, [5](#fig:topNews){reference-type="ref"
+reference="fig:topNews"} si nota come in questa schermata le
+informazioni sono riportate secondo una grafica molto semplice ed
+intuitiva e sono le informazioni messe in ordine per importanza o per
+influenza. Si tendono, quindi a mostrare solamente le informazioni più
+rilevanti e per poi lasciare l'approfondimento di essi nelle loro pagine
+dedicate.
 
-\subsection{Barra laterale}
-La barra laterale del sito presenta differnti pulsanti di navigazione come la \textbf{Homepage} data dal pulsante con il logo dell'università di parma.
-Il pulsante \textbf{Dashboard} che porta l'utente in una tipica schermata a blocchi nella quale è possibile vedere le informazioni di maggior rilievo della giornata corrente.
-\textbf{Cryptos} che mostrerà a schermo tutte le criptovalute con i loro valori attuali alla quale è poi possibile accederne ai dettagli con un semplice click.
-Infine \textbf{News} che riportà alcuni titoli tra i siti più famosi di notiziari alla quale è possibile accerdervi ed espandere l notizia per saperne di più.
+[Ridotta]{#fig:ridotta .image .placeholder original-image-src="1.png"
+original-image-title="fig:" width="\\linewidth"}
 
-Un ulteriore bottone presente nella barra laterale è quello della \textbf{Dark mode} che eseguirà un cambio di colori della schermata.
+[Ridotta]{#fig:ridotta .image .placeholder original-image-src="2.png"
+original-image-title="fig:" width="\\linewidth"}
 
+[Ridotta]{#fig:ridotta .image .placeholder original-image-src="3.png"
+original-image-title="fig:" width="\\linewidth"}
 
-Da come è possibile vedere nelle Figure \ref{fig:normale},  \ref{fig:notifiche}, \ref{fig:ridotta}, la barra può assumere differenti forme in base a come più si preferisce.
-Inoltre dalla Figura \ref{fig:notifiche} si nota che può comparire un numero di notifica nella pagina di riferimento. Purtroppo questa configurazione è stata tolta per una limitazione del software delle API alla quale il sito fa riferimento.
+[Latest News]{#fig:topNews .image .placeholder
+original-image-src="4.png" original-image-title="fig:"
+width="\\linewidth"}
 
-\subsection{Schermata Pricipale}
-Dalle immagini sottostanti \ref{fig:topCrypto}, \ref{fig:topNews} si nota come in questa schermata le informazioni sono riportate secondo una grafica molto semplice ed intuitiva e sono le informazioni messe in ordine per importanza o per influenza.
-Si tendono, quindi a mostrare solamente le informazioni più rilevanti e per poi lasciare l'approfondimento di essi nelle loro pagine dedicate.
+[Latest News]{#fig:topNews .image .placeholder
+original-image-src="5.png" original-image-title="fig:"
+width="\\linewidth"}
 
+## Dettagli e info
 
-\begin{figure}[!htb]
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{1.png}
-  \caption{Normale}\label{fig:normale}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[width=\linewidth]{2.png}
-  \caption{Notifiche}\label{fig:notifiche}
-\endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{3.png}
-  \caption{Ridotta}\label{fig:ridotta}
-\endminipage
-\end{figure}
+Nella schermata dedicata alla visualizzazione dei dati e delle
+informazioni generali riguardanti una specifica criptovaluta scelta
+dall'utente è possibile vedere proiettata tramite grafico l'andamento
+nel tempo del prezzo della moneta e tramite un selettore è possibile
+sceglierne la qunatità di tempo desiderata come da Figura
+[\[fig:graphic\]](#fig:graphic){reference-type="ref"
+reference="fig:graphic"}. Scorrendo verso il basso si possono invece
+visualizzare altre informazioni utili tra coi i link alle pagine di
+riferimento alla stessa moneta ed alla loro documentazione come da
+Figura [\[fig:info\]](#fig:info){reference-type="ref"
+reference="fig:info"} e Figura [9](#fig:links){reference-type="ref"
+reference="fig:links"}.
 
-\begin{figure}[!htb]
-\minipage{\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{4.png}
-  \caption{top 10 Crypto}\label{fig:topCrypto}
-\endminipage\hfill
+[Links]{#fig:links .image .placeholder original-image-src="10.png"
+original-image-title="fig:" width="\\linewidth"}
 
-\minipage{\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{5.png}
-  \caption{Latest News}\label{fig:topNews}
-\endminipage\hfill
-\end{figure}
-\clearpage
+[Links]{#fig:links .image .placeholder original-image-src="11.png"
+original-image-title="fig:" width="\\linewidth"}
 
-\subsection{Dettagli e info}
-Nella schermata dedicata alla visualizzazione dei dati e delle informazioni generali riguardanti una specifica criptovaluta scelta dall'utente è possibile vedere proiettata tramite grafico l'andamento nel tempo del prezzo della moneta e tramite un selettore è possibile sceglierne la qunatità di tempo desiderata come da Figura \ref{fig:graphic}. 
-Scorrendo verso il basso si possono invece visualizzare altre informazioni utili  tra coi i link alle pagine di riferimento alla stessa moneta ed alla loro documentazione come da Figura \ref{fig:info} e Figura \ref{fig:links}.
+[Links]{#fig:links .image .placeholder original-image-src="12.png"
+original-image-title="fig:" width="\\linewidth"}
 
-\begin{figure}[!htb]
-\minipage{0.4\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{10.png}
-  \caption{Grafico}\label{fig:graphic}
-\endminipage\hfill
-\minipage{0.4\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{11.png}
-  \caption{Statistiche}\label{fig:stats}
-\endminipage\hfill
-\minipage{0.4\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{12.png}
-  \caption{Info}\label{fig:info}
-\endminipage\hfill
-\minipage{0.4\textwidth}
-    \centering
-  \includegraphics[width=\linewidth]{13.png}
-  \caption{Links}\label{fig:links}
-\endminipage\hfill
-\end{figure}
-\clearpage
+[Links]{#fig:links .image .placeholder original-image-src="13.png"
+original-image-title="fig:" width="\\linewidth"}
 
-\section{Tecnologie usate}
+# Tecnologie usate
 
-Il progetto viene realizzato utilizzando \href{https://it.reactjs.org/}{React} e
-\href{https://nodejs.org/it/}{Node.js} con l'ausilio di visual studio code come supporto per programmare e caricare il tutto su git in maniera tale da riuscire a programmare su differenti computer mantendo sempre l'ultima versione realizzata.
+Il progetto viene realizzato utilizzando
+[React](https://it.reactjs.org/) e [Node.js](https://nodejs.org/it/) con
+l'ausilio di visual studio code come supporto per programmare e caricare
+il tutto su git in maniera tale da riuscire a programmare su differenti
+computer mantendo sempre l'ultima versione realizzata.
 
-\subsection{Librerie utilizzate}
-Sono presenti differenti librerie grafiche come
-\textbf{Bootstrap}, \textbf{Antd}, \textbf{ChartJs}.
-Librerie di utilità come \textbf{Millify}, \textbf{Helmet},\textbf{Moment}.
-Mentre invece per la parte dedicata alla gestione delle API utilizzo il toolkit di \textbf{ReduxJs}.
-Per le varie icone invece vengono usate le \textbf{react-icon} e \textbf{ant-design/icon}.
+## Librerie utilizzate
 
-\subsection{Siti web di appoggio}
-Per procurare le informazioni faccio affidamento al sito \textbf{RapidAPI} che offre molti servizi gratuiti con una piccola limitazione sulle richieste giornaliere e mensili. 
+Sono presenti differenti librerie grafiche come **Bootstrap**, **Antd**,
+**ChartJs**. Librerie di utilità come **Millify**,
+**Helmet**,**Moment**. Mentre invece per la parte dedicata alla gestione
+delle API utilizzo il toolkit di **ReduxJs**. Per le varie icone invece
+vengono usate le **react-icon** e **ant-design/icon**.
 
+## Siti web di appoggio
 
-Nello specifico utilizzo \url{https://rapidapi.com/Coinranking/api/coinranking1/}
-per prendere le tutto ciò che mi serve per quanto riguarda le crypto valute.
+Per procurare le informazioni faccio affidamento al sito **RapidAPI**
+che offre molti servizi gratuiti con una piccola limitazione sulle
+richieste giornaliere e mensili.
 
+Nello specifico utilizzo
+<https://rapidapi.com/Coinranking/api/coinranking1/> per prendere le
+tutto ciò che mi serve per quanto riguarda le crypto valute.
 
-\url{https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/} viene utilizzato per procurarsi tutte quelle che sono le news riguardanti un generico argomento.
-
-
-\end{document}
+<https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/>
+viene utilizzato per procurarsi tutte quelle che sono le news
+riguardanti un generico argomento.
